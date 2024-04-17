@@ -1,0 +1,469 @@
+/* Đây là phần cài đặt chung */
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Đây là phần thân chính */
+body {
+  width: 1170px;
+  margin: auto;
+  /* display: block; */
+  font-family: "Helvetica Neue", sans-serif;
+
+  line-height: 1;
+}
+
+/* Đây là phần khung mẹ chủa thẻ banner chứa phần hình ảnh và tiêu đề đầu trang */
+#banner {
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  margin-top: 50px;
+}
+
+/* Đây là phần hình ảnh thuộc thẻ banner */
+.banner-img {
+  width: 100%;
+  filter: brightness(50%);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Đây là phần tiêu đề thuộc thẻ banner */
+.banner-head {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -140%);
+  color: white;
+}
+
+/* Nội dụng heading 1 thuộc thẻ banner-head */
+.banner-head h1 {
+  margin-bottom: 8px;
+}
+
+/* Nội dụng span thuộc thẻ banner-head */
+.banner-head span {
+  color: rgb(192, 192, 192);
+}
+
+/* Cài đặt thuộc tính cho section#nav-bar */
+#nav-bar {
+  width: 100%;
+  text-align: center;
+  /* margin-bottom: 40px; */
+}
+
+/* Đặt hình đại diện trèn nên phần ảnh của banner */
+.container-nav-bar {
+  transform: translate(0%, -36%);
+}
+/* đổi mầu chữ cho thẻ a */
+.container a {
+  color: #199cdb;
+}
+/* Bỏ phần gạch dưới của thẻ a */
+.nav-inline-block a {
+  text-decoration: none;
+}
+
+/* Cài đặt Inline-bock cho thẻ span thuộc section#nav-bar - Phần chung cho các Icon */
+span.nav-inline-block {
+  font-size: 12px;
+  display: inline-block;
+  width: 100px;
+  padding: 5px;
+  border: 1px solid rgb(192, 192, 192);
+  background-color: white;
+
+  margin-bottom: 50px;
+}
+
+/* Cấu hình thuộc tính cho ảnh đại diện */
+.nav-img {
+  width: 120px;
+  height: 130px;
+  border-radius: 50%;
+
+  padding: 6px;
+  /* border: 0.1px solid rgb(187, 187, 187); */
+}
+
+/* Cài đặt Inline-bock cho thẻ span thuộc section.nav-bar - Phần riêng của tiêu dề - sẽ được thay thế bằng hình ảnh cá nhân ở phần nâng cao */
+span.nav-inline-block-head {
+  width: 130px;
+  height: 140px;
+  border-radius: 50%;
+  border: 1px;
+
+  margin: auto 80px;
+  border: 0.1px solid rgb(187, 187, 187);
+}
+
+/* Cài đặt phần heading cho thẻ nav-inline-block-head của section.nav-bar
+span h1 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+/* Cài đặt phần paragraph cho thẻ nav-inline-block-head của section.nav-bar
+span p {
+  font-size: 12px;
+  color: rgb(95, 95, 95);
+}
+*/
+/*
+.bg-grey {
+  background: #f7f7f7;
+} */
+
+/* Thẻ div:abount-container là thẻ con của section.about được cài đặt grid chia 2 cột 50%.*/
+.about-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid rgb(212, 211, 211);
+
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 60px;
+}
+
+/* Thẻ personal là thuộc tính chung cho 2 cột được chia grid của thẻ about-contaner */
+.personal {
+  line-height: 1.9;
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Cài đặt thuộc tính cho các thẻ con của personal */
+.personal h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* Cài đặt thuộc tính cho các thẻ con của personal */
+.personal p,
+.personal li {
+  color: rgb(95, 95, 95);
+  margin-left: 30px;
+}
+
+/* Cài đặt backgound cho cột 1 thuộc thẻ about-contaner */
+.target {
+  background-color: rgb(240, 240, 240);
+}
+
+/* Cài đặt backgound cho cột 1 thuộc thẻ about-contaner */
+.personal-info {
+  background-color: rgb(233, 233, 233);
+}
+
+/* Cài đặt grid chi 3 cột và 2 dòng cho thẻ job-details */
+.job-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Thẻ detail này sẽ dùng grid chia 2 phần job-detail làm 2 dòng: là 1/10 và 9/10 */
+.detail {
+  display: grid;
+  grid-template-rows: 0.1fr 0.9fr;
+  border: 1px solid rgb(192, 192, 192);
+  padding: 20px;
+
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+/* Thẻ detail-info sẽ chi dòng 1 của detail thành 2 cột 70% và 30% */
+.detail-infor {
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  justify-items: left;
+  align-content: left;
+
+  padding: 10px;
+
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+
+/* Cài đặt thuộc tính inline-block dòng 1 thuộc cột 2 và 3 của thẻ job-details  */
+.language,
+.skill {
+  /* background: #199cdb; */
+  display: inline-block;
+
+  /* height: 2px;
+  margin-right: 10px;
+  width: 45px; */
+}
+
+/* Cài đặt mầu cho background dòng 1 thuộc cột 2 và 3 của thẻ job-details   */
+.skill-background,
+.language-background {
+  background-color: #199cdb;
+}
+
+/* Cài đặt kích thước cho các Icon của thẻ detail-info */
+.detail-infor i {
+  font-size: 40px;
+  /* margin: 4px 0; */
+}
+
+/* Đổ mầu và căn lề tốp cho thẻ detail-infor-1 */
+.detail-infor-1 {
+  margin-top: 30px;
+  color: rgb(95, 95, 95);
+}
+
+/* Cài đặt thuộc tính inline-block cho chữ Hiện tại trong thẻ "time" */
+.box {
+  display: inline-block;
+  background-color: #199cdb;
+  color: white;
+  border-radius: 8px;
+
+  padding: 2px 4px;
+}
+
+/* Cài đặt symble đầu dòng  */
+.dot {
+  height: 14px;
+  width: 14px;
+  background-color: #199cdb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Cài đặt chữ nghiêng cho thẻ time */
+.time {
+  font-style: italic;
+}
+
+/* Cài đặt khoảng cách dòng */
+dt {
+  line-height: 1.2;
+}
+
+/* Cài đặt khoảng cách dòng và lề trái */
+dd {
+  line-height: 1.9;
+  padding-left: 20px;
+}
+
+/* Cài đặt đường Line mầu xanh cấp độ cho thẻ kỹ năng */
+.line {
+  display: inline-block;
+  margin-top: 14px;
+  width: 60px;
+  height: 2px;
+  background-color: #199cdb;
+  margin-bottom: 20px;
+}
+
+/* Cài đặt flex cho thẻ sở thích */
+.detail-infor-hobby {
+  display: flex;
+  gap: 20px;
+}
+
+/* Cài đặt thuộc tính cho Icon của thẻ sở thích */
+.hobby {
+  margin: 6px;
+  padding: 12px;
+  font-size: 12px;
+
+  /* display: inline-block; */
+  border: 2px solid #199cdb;
+  border-radius: 50%;
+}
+
+/* Cài đặt thuộc tính cho Icon của thẻ sở thích */
+.ic-megaphone,
+.ic-strategy,
+.ic-hotairballoon,
+.ic-basket {
+  width: 12px;
+  color: #199cdb;
+}
+
+/* Cài đặt thuộc tính cho paragraph của thẻ sở thích */
+.detail-infor-1 p {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Đặt mầu nền cho thẻ chứng chỉ */
+.container-certificate {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Đặt thuộc tính cho heading của thẻ chứng chỉ */
+.container-certificate h1 {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+/* Cài đặt grid 2 cột cho thẻ chứng chỉ */
+.certificate-grid {
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+
+/* Chia mỗi cột trong certificate-grid thành 2 cột bằng nhau  */
+.certificate-grid-col {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* Đặt thuộc tính cho hình ảnh của chứng chỉ */
+.certificate-img {
+  padding-left: 10px;
+  width: 250px;
+}
+
+/* Đặt border trái cho cột 2 của thẻ chứng chỉ */
+.cert-border-java {
+  border-left: 1px solid #d6c08d;
+}
+
+.cert-border-java,
+.cert-border-web {
+  border-bottom: 1px solid #d6c08d;
+}
+
+/* Chia 3 cột bằng grid cho thẻ dự án */
+
+.container-project {
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 60px;
+}
+
+.project-small {
+  display: grid;
+  grid-template-columns: 100%;
+
+  gap: 20px;
+}
+
+.container-project h1 {
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.container-project-col {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Đặt thuộc tính cho hình ảnh của dự án */
+.project-img img {
+  width: 100%;
+}
+
+/* Border-bottom của thẻ dt */
+.project-dt {
+  border-bottom: 1px solid #199cdb;
+}
+
+.personal-icon {
+  width: 100%;
+}
+
+/* Cài đặt inline-block cho thẻ icon */
+.icon-inline-block {
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* Cài đặt thuộc tính cho thẻ năm */
+.year {
+  padding: 2px 4px;
+  background-color: #199cdb;
+  border-radius: 20px;
+}
+
+/* Cài đặt thuộc tính collapse và border top cho table */
+table {
+  border-collapse: collapse;
+  border-top: 1px solid #199cdb;
+}
+
+/* Cài đặt viền dưới cho ròng của bảng */
+tr {
+  border-bottom: 1px solid #199cdb;
+}
+
+/* Cài đặt thuộc tính chiếm 30% và căn lề trái cho tiêu đề của bảng */
+th {
+  width: 30%;
+  text-align: left;
+}
+
+/* Cài đặt thuộc tính chiếm 70% cho ô dữ liệu của bảng */
+td {
+  width: 70%;
+}
+
+/* Đặt thuộc tính kích thước và mầu nền cho thẻ footer */
+.container-footer {
+  width: 100%;
+  height: 18vh;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+}
+
+/* Cài đặt inline-block cho thẻ footer  */
+.footer-inline-block {
+  font-size: 20px;
+  display: inline-block;
+  color: #199cdb;
+
+  margin-top: 8vh;
+}
+
+/* Bo tròn đường viền cho các icon của footer */
+.border-footer-icon {
+  margin: 4px;
+  padding: 6px;
+  font-size: 12px;
+  color: white;
+  background-color: #199cdb;
+
+  border: 2px solid #199cdb;
+  border-radius: 50%;
+}
+
+/* Bỏ gạch chân cho link anchor của footer */
+.container-footer a {
+  text-decoration: none;
+}
